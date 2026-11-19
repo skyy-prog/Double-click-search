@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Double-Click Search",
+  "version": "1.0",
+  "description": "Double-click any word to get a Search button that opens the results in a new tab.",
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ]
+}
